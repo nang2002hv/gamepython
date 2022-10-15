@@ -15,9 +15,11 @@ class Enemy(pygame.sprite.Sprite) :
 		self.rect = self.image.get_rect(
 			center =((random.randint(20,width-100)),(random.randint(0,10)))
 		)
-		self.speed = 3# tốc độ của địch đi ra
-	def update(self,pressed_key) :
+		self.speed = 1# tốc độ của địch đi ra
+		self.laser = 0
+	def update(self, pressed_keys) :
 		self.rect.move_ip(0,self.speed)
+		self.laser += 1
 		if self.rect.bottom > self.height :
 			self.kill()
 			self.rect = self.image.get_rect(

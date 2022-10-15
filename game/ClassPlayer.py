@@ -29,8 +29,7 @@ class Player1(pygame.sprite.Sprite):
 		if self.rect.right > self.width:
 			self.rect.right = self.width	
 
-	def show(self) :
-		return (self.rect.centerx, self.rect.top)
+
 
 
 
@@ -62,5 +61,3 @@ class Player2(pygame.sprite.Sprite):
 			self.rect.left = 0	
 		if self.rect.right > self.width:
 			self.rect.right = self.width
-	def show(self) :
-		return (self.rect.centerx, self.rect.top)	
